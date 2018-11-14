@@ -8,6 +8,7 @@ from ptsemseg.models.pspnet import *
 from ptsemseg.models.icnet import *
 from ptsemseg.models.linknet import *
 from ptsemseg.models.frrn import *
+from ptsemseg.models.msdnet import *
 
 
 def get_model(model_dict, n_classes, version=None):
@@ -61,6 +62,7 @@ def _get_model_instance(name):
             "linknet": linknet,
             "frrnA": frrn,
             "frrnB": frrn,
+            "msd":msdnet,
         }[name]
     except:
         raise("Model {} not available".format(name))
